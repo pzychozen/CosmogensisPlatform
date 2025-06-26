@@ -1,6 +1,7 @@
 import numpy as np
 from neural_core.symbolic_phase_classifier import train_phase_classifier
 
+
 if __name__ == "__main__":
     data_path = "symbolic_embeddings.npz"
     try:

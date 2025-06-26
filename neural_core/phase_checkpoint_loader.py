@@ -1,9 +1,11 @@
 import torch
 import os
 import numpy as np
+
 from neural_core.symbolic_phase_classifier import PhaseClassifier, train_phase_classifier
 
-CHECKPOINT_PATH = "neural_core/symbolic_phase_classifier.pt"
+
+CHECKPOINT_PATH = "neural_core/checkpoint/symbolic_phase_classifier.pt"
 
 # === Loader ===
 def load_phase_classifier(input_dim, auto_retrain=False):

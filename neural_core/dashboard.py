@@ -5,7 +5,8 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import QTimer
 
-from engine import RecursiveUniverse, create_run_dirs
+from simulation.engine import RecursiveUniverse
+from simulation.utils import create_run_dirs
 
 
 class UniverseDashboard(QWidget):

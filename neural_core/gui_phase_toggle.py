@@ -1,7 +1,9 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel
-from neural_core.phase_checkpoint_loader import load_phase_classifier
 import numpy as np
+
+from neural_core.phase_checkpoint_loader import load_phase_classifier
+
 
 class PhaseClassifierToggle(QWidget):
     def __init__(self):

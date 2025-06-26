@@ -5,6 +5,9 @@ import seaborn as sns
 import os
 from datetime import datetime
 
+from neural_core.plot_heatmaps import visualize_heatmap
+
+
 def plot_heatmaps(csv_path="data/analyzis/latest_run_results.csv", run_id=1):
     # Load CSV data
     if not os.path.exists(csv_path):
