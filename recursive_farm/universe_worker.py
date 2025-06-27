@@ -1,11 +1,11 @@
 import numpy as np
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from extractors.lattice_extractor import extract_lattice
 from analyzers.symbolic_genome import SymbolicGenome
 from database.genome_database import RecursiveGenomeDatabase
 
 def run_universe_run(farm_run_id, steps=500):
-    universe = RecursiveUniverse(grid_size=128)
+    universe = UnifiedRecursiveUniverse(grid_size=128)
     db = RecursiveGenomeDatabase()
 
     for _ in range(steps):

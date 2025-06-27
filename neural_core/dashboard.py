@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import QTimer
 
-from simulation.engine import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from simulation.utils import create_run_dirs
 
 
@@ -41,7 +41,7 @@ class UniverseDashboard(QWidget):
         self.run_id = 1
         self.run_dirs = create_run_dirs(run_id=self.run_id)
 
-        self.universe = RecursiveUniverse(
+        self.universe = UnifiedRecursiveUniverse(
             use_vesica=True,
             vesica_strength=0.4,
             params={"eta": 0.8},

@@ -4,7 +4,7 @@ import os
 import pickle
 import random
 
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from memory_lattice import MemoryLattice
 from lattice_extractor import extract_lattice
 from symbolic_genome import SymbolicGenome
@@ -44,7 +44,7 @@ class CosmologicalOperatingSystem:
             params = self.random_params()
 
         print(f"Generating {universe_id}...")
-        universe = RecursiveUniverse(grid_size=128, params=params)
+        universe = UnifiedRecursiveUniverse(grid_size=128, params=params)
 
         for _ in range(steps):
             universe.step()
