@@ -1,4 +1,4 @@
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from extractors.lattice_extractor import extract_lattice
 from extractors.memory_lattice import MemoryLattice
 from analyzers.fractal_mind import FractalMind
@@ -19,7 +19,7 @@ from analyzers.symbolic_genome import SymbolicGenome
 # Phase 1 — Single Universe Test Run
 # ================================================================
 print("Running Single Universe Simulation...")
-universe = RecursiveUniverse(grid_size=128)
+universe = UnifiedRecursiveUniverse(grid_size=128)
 for _ in range(1000):
     universe.step()
 
@@ -47,7 +47,7 @@ cosmo.analyze_species_classification()
 # Phase 3 — Multiverse Forge Expansion
 # ================================================================
 forge = MultiverseForge(
-    universe_class=RecursiveUniverse,
+    universe_class=UnifiedRecursiveUniverse,
     genome_class=SymbolicGenome,
     species_class=CosmologicalSpeciesClassifier,
     num_universes=5,

@@ -1,4 +1,4 @@
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from database.genome_database import RecursiveGenomeDatabase
 from analyzers.symbolic_genome import SymbolicGenome
 from recursive_farm.farm_manager import RecursiveEvolutionaryFarm
@@ -43,7 +43,7 @@ class IntegratedRecursiveControl:
 
     def run_universe(self, steps=500):
         print("Running Universe Simulation...")
-        universe = RecursiveUniverse(grid_size=128)
+        universe = UnifiedRecursiveUniverse(grid_size=128)
         for _ in range(steps):
             universe.step()
         centroids, pairs = universe.memory.memory[-1]['centroids'], universe.memory.memory[-1]['pairs']

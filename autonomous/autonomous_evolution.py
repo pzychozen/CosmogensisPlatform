@@ -2,7 +2,7 @@ import time
 import random
 import numpy as np
 
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from database.genome_database import RecursiveGenomeDatabase
 from analyzers.symbolic_genome import SymbolicGenome
 from recursive_farm.breeder_module import GenomeBreeder
@@ -44,13 +44,13 @@ class AutonomousEvolutionEngine:
             time.sleep(sleep_time)
 
     def run_fresh_universe(self, generation_id, steps):
-        universe = RecursiveUniverse(grid_size=self.grid_size)
+        universe = UnifiedRecursiveUniverse(grid_size=self.grid_size)
         for _ in range(steps):
             universe.step()
         self.store_genome(universe, generation_id, "fresh")
 
     def run_universe_with_injected_genome(self, child_genome, generation_id, steps):
-        universe = RecursiveUniverse(grid_size=self.grid_size)
+        universe = UnifiedRecursiveUniverse(grid_size=self.grid_size)
         # NOTE: We are not injecting genome into recursion yet directly.
         # Later we'll add genome-parameter fusion system here.
         for _ in range(steps):

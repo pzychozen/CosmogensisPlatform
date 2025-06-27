@@ -4,7 +4,7 @@ import numpy as np
 import random
 import copy
 
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from symbolic_genome import SymbolicGenome
 from cosmological_species import CosmologicalSpeciesClassifier
 

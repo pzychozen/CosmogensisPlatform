@@ -1,7 +1,7 @@
 import random
 import copy
 
-from core_engine.recursive_universe import RecursiveUniverse
+from core_engine.recursive_universe import UnifiedRecursiveUniverse
 from analyzers.fractal_mind import FractalMind
 from analyzers.symbolic_genome import SymbolicGenome
 
@@ -52,7 +52,7 @@ class AICosmogenesisOptimizer:
         return fitness
 
     def evaluate_fitness(self, params):
-        universe = RecursiveUniverse(grid_size=128, params=params)
+        universe = UnifiedRecursiveUniverse(grid_size=128, params=params)
         for _ in range(500):
             universe.step()
         fitness = self.compute_fitness(universe.memory)
